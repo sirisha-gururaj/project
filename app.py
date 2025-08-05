@@ -5,6 +5,7 @@ from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from models.llm import get_chatgroq_model
 from config import config
+from utils.rag_utils import setup_rag_pipeline, query_rag_pipeline
 
 def get_chat_response(chat_model, messages, system_prompt):
     """Get response from the chat model"""
@@ -106,50 +107,58 @@ def instructions_page():
     Ready to start chatting? Navigate to the **Chat** page using the sidebar! 
     """)
 
+
 def chat_page():
     """Main chat interface page"""
-    st.title("🤖 AI ChatBot")
+    st.title("🤖 MyCampusBot")
+
+    # --- loading RAG pipeline ---
+    @st.cache_resource(show_spinner="Loading campus knowledge...")
+    def load_retriever():
+        """Sets up the RAG pipeline and caches the retriever."""
+        return setup_rag_pipeline()
+
+    retriever = load_retriever()
     
-    # Get configuration from environment variables or session state
-    # Default system prompt
-    system_prompt = ""
+    # Define a system prompt to guide the bot's behavior
+    system_prompt = "You are a helpful Student Helpdesk assistant for the Global University of Innovation. Your role is to answer student queries accurately based on the provided context from campus documents. If the context does not contain the answer, state that you don't have enough information from the documents."
     
-    
-    # Determine which provider to use based on available API keys
     chat_model = get_chatgroq_model()
     
-    # Initialize chat history
     if "messages" not in st.session_state:
         st.session_state.messages = []
     
-    # Display chat messages
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
     
-    # Chat input
-    # if chat_model:
-    if prompt := st.chat_input("Type your message here..."):
-        # Add user message to chat history
+    if prompt := st.chat_input("Ask about scholarships, library hours, etc."):
         st.session_state.messages.append({"role": "user", "content": prompt})
-        
-        # Display user message
         with st.chat_message("user"):
             st.markdown(prompt)
-        
-        # Generate and display bot response
+
         with st.chat_message("assistant"):
-            with st.spinner("Getting response..."):
-                response = get_chat_response(chat_model, st.session_state.messages, system_prompt)
+            with st.spinner("Searching campus documents..."):
+                # 1. Get context from documents using the retriever
+                relevant_docs = query_rag_pipeline(retriever, prompt)
+                context = "\n\n".join([doc.page_content for doc in relevant_docs])
+
+                # 2. Create an augmented prompt with the context
+                augmented_prompt = f"""Using the following context from campus documents, please answer the user's question.
+
+                Context:
+                {context}
+
+                User Question:
+                {prompt}
+                """
+
+                # 3. Send the AUGMENTED prompt to the LLM
+                temp_messages = st.session_state.messages[:-1] + [{"role": "user", "content": augmented_prompt}]
+                response = get_chat_response(chat_model, temp_messages, system_prompt)
                 st.markdown(response)
-        
-        # Add bot response to chat history
+
         st.session_state.messages.append({"role": "assistant", "content": response})
-    else:
-        if not config.GROQ_API_KEY:
-            st.info("🔧 No API keys found in environment variables. Please check the Instructions page to set up your API keys.")
-        else:
-            st.info("👋 Start by asking me something above.")
         
 def main():
     st.set_page_config(

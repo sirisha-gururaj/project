@@ -1,0 +1,114 @@
+
+Global University of Innovation (GUI) - Central Library Policies and Information
+
+CENTRAL LIBRARY GENERAL INFORMATION
+
+The Central Library of the Global University of Innovation (GUI), also referred to as the SJU Library, is a state-of-the-art academic knowledge center serving students, researchers, and faculty with a broad range of physical and digital resources.
+
+• Carpet Area: 21,805.26 sq. ft.
+• Infrastructure: 15 different sections including Reference, Circulation, Digital Library, Periodicals, Book Bank, and more.
+• Open Access System: Adopted for ease of browsing.
+• Total Collection: Over 120,000 books (including donated books).
+• Donated Books: 3,500+
+• Newspapers Subscribed: 15 (regional, national, and international)
+• Magazines and Journals: 60+ popular and scholarly periodicals
+• Library Automation: Fully automated using Koha ILMS (Integrated Library Management System).
+• Classification System: Dewey Decimal Classification (DDC)
+• Cataloguing Standard: Anglo-American Cataloguing Rules – 2nd Edition (AACR-2)
+• Metadata Format: MARC 21
+• Digital Archive: Maintained via DSpace software
+
+OPERATING HOURS (ODD & EVEN SEMESTERS)
+
+• Monday – Friday: 8:00 AM to 12:00 AM (Midnight)
+• Saturday: 10:00 AM to 8:00 PM
+• Sunday: 12:00 PM to 10:00 PM
+• Examination Periods: 24/7 Open Access for GUI Students
+• Public Holidays: CLOSED
+
+LIBRARY ZONES & CONDUCT
+
+1. Access Requirement: A valid GUI Student ID card is mandatory for entry.
+2. Noise Control Zones:
+   • Silent Zones (3rd & 4th Floors): No talking; phones must be on silent.
+   • Quiet Study Zones (2nd Floor): Whispered communication allowed.
+   • Group Study Areas (1st Floor): Collaborative discussions allowed. Room booking required via library portal.
+3. Food & Drink Policy:
+   • Covered drinks only.
+   • No food permitted.
+   • Cafeteria available on the ground floor.
+4. Surveillance & Attendance:
+   • 24/7 CCTV surveillance.
+   • Computerised attendance system at entrance.
+
+BORROWING RULES
+
+• Undergraduate Students:
+   – Borrow up to 5 books for 14 days.
+
+• Postgraduate Students:
+   – Borrow up to 8 books for 21 days.
+
+• Overdue Fines:
+   – ₹10 per book/day.
+   – Lost or damaged books must be replaced or paid for at current market value.
+
+• Book Bank:
+   – Special provision for economically disadvantaged students from all departments.
+
+DIGITAL LIBRARY & E-RESOURCES
+
+The Digital Library is equipped with advanced tools to support research and self-learning.
+
+• E-Learning Resource Centre with high-speed LAN-connected computers.
+• Remotely accessible e-resources via Knimbus RAS software (24/7).
+• Two Android touchscreen kiosks for digital literacy and library navigation.
+• Installed research tools and academic software for student/researcher use.
+• Semester-wise question papers available through DSpace.
+• Web-enabled Online Public Access Catalogue (OPAC) system.
+• Consortium Access: Membership to N-LIST and DELNET for e-journals, databases, and e-books.
+
+Digital Library Rules:
+- Access restricted to GUI students, faculty, and authorized members only.
+- No installation of personal software or media is allowed.
+- Do not change hardware settings or unplug peripherals.
+- Users must log out after use; data must be saved externally before session ends.
+- Internet is for academic and research use only. Misuse can result in suspension.
+- Maintain silence in the digital library zone.
+
+TECHNOLOGY & AUTOMATION
+
+• RFID-based Self Check-in/Check-out System
+• Auto-generated email alerts for all library transactions
+• DSpace Institutional Repository for GUI digital content
+• Koha ILMS for cataloguing and circulation
+• Dewey Decimal Classification for subject-wise shelving
+• Shelf labels include rack no., shelf no., class no., and subjects
+
+LIBRARY STAFF & SUPPORT
+
+The library team consists of professionally qualified and well-trained staff with deep expertise in library science and user services. Staff are available during working hours to assist with book searches, digital tools, referencing, and research support.
+
+INFORMATION SERVICES
+
+• New arrivals and announcements displayed on dedicated boards and screens
+• Regular newsletters with updates on resources, events, and library news
+• Help Desk and Research Support for citation, referencing, and academic writing
+
+CONTACT & SUPPORT
+
+For queries, room bookings, or digital access issues, please contact:
+Email: librarysupport@guinnovation.edu.in
+Phone: +91-XXXX-XXX-XXX
+Library Portal: https://library.guinnovation.edu.in
+
+PLEASE RESPECT THE LIBRARY SPACES
+
+Treat the library as a shared academic environment:
+– Keep phones silent.
+– Avoid reserving seats.
+– Return books on time.
+– Maintain cleanliness.
+– Follow staff instructions.
+
+Violations of library rules may result in suspension of privileges.
