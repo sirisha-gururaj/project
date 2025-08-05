@@ -4,7 +4,7 @@ import sys
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from models.llm import get_chatgroq_model
-
+from config import config
 
 def get_chat_response(chat_model, messages, system_prompt):
     """Get response from the chat model"""
@@ -146,8 +146,11 @@ def chat_page():
         # Add bot response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
     else:
-        st.info("🔧 No API keys found in environment variables. Please check the Instructions page to set up your API keys.")
-
+        if not config.GROQ_API_KEY:
+            st.info("🔧 No API keys found in environment variables. Please check the Instructions page to set up your API keys.")
+        else:
+            st.info("👋 Start by asking me something above.")
+        
 def main():
     st.set_page_config(
         page_title="LangChain Multi-Provider ChatBot",
