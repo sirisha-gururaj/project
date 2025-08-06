@@ -8,3 +8,7 @@ langchain-community
 faiss-cpu
 pypdf
 sentence-transformers
+selenium 
+beautifulsoup4
+PyPDF2
+tavily-python

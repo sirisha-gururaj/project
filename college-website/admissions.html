@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admissions | Global University of Innovation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Admissions</h1>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="academics.html">Academics</a>
+    <a href="admissions.html" class="active">Admissions</a>
+    <a href="campus-life.html">Campus Life</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<div class="main">
+    <h2>Application Process</h2>
+    <ol>
+        <li>Fill out the <a href="#app-form">online application form</a>. Ensure all personal and academic details are accurate.</li>
+        <li>Upload required documents (marksheets, ID proof etc.). File formats accepted include PDF, JPEG, and PNG. Max size: 2MB each.</li>
+        <li>Await email confirmation & interview call. Shortlisted candidates will be contacted within 7 working days.</li>
+    </ol>
+    
+    <h2 id="app-form">Quick Application</h2>
+    <form id="apply">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="program">Program:</label>
+            <select name="program" id="program">
+                <option>BSc Computer Science</option>
+                <option>BBA</option>
+                <option>BSc Biotechnology</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit Application">
+    </form>
+    
+    <div id="app-message"></div>
+    
+    <h2>Admission Tips</h2>
+        <ul>
+            <li>Start your application early to avoid last-minute issues.</li>
+            <li>Double-check document formats and file sizes before uploading.</li>
+            <li>Prepare well for the interview by reviewing your chosen program’s basics.</li>
+            <li>Reach out to our admission office if you need any clarification.</li>
+        </ul>
+
+</div>
+
+<footer>
+    &copy; 2025 Global University of Innovation. All rights reserved.
+</footer>
+<script src="script.js"></script>
+<script>
+// Inline form handling
+const form = document.getElementById('apply');
+const msg = document.getElementById('app-message');
+if(form) {
+    form.onsubmit = function(e) {
+        e.preventDefault();
+        msg.style.color = '#1976D2';
+        msg.innerHTML = "Thank you for applying! We will contact you soon.";
+        form.reset();
+    }
+}
+</script>
+</body>
+</html>

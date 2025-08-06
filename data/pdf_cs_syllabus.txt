@@ -1,0 +1,8 @@
+B.Sc. Computer Science Syllabus Overview
+Semester 1: Programming in C, Mathematics I, Digital Logic
+Semester 2: Data Structures, Discrete Mathematics, Computer Organization
+Semester 3: OOP with Java, Database Systems, Operating Systems
+Semester 4: Algorithms, Software Engineering, Web Technologies
+Semester 5: Data Science, Artificial Intelligence
+Semester 6: Internship/Project
+

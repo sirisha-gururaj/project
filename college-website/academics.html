@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Academics | Global University of Innovation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Academics</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="academics.html" class="active">Academics</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="campus-life.html">Campus Life</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="main">
+    <h2>Departments</h2>
+    <div class="cards" id="department-cards">
+        <!-- Computer Science Card -->
+        <div class="card department-card" data-dept="cs">
+            <h3>Computer Science</h3>
+            <p>Cutting-edge curriculum in AI, Data Science, and Software Engineering.</p>
+            <button class="view-details">View Details</button>
+        </div>
+        <!-- Business Administration Card -->
+        <div class="card department-card" data-dept="ba">
+            <h3>Business Administration</h3>
+            <p>Leadership and analytics for tomorrow’s markets.</p>
+            <button class="view-details">View Details</button>
+        </div>
+        <!-- Biosciences Card -->
+        <div class="card department-card" data-dept="bio">
+            <h3>Biosciences</h3>
+            <p>Innovative biotechnology and applied life sciences.</p>
+            <button class="view-details">View Details</button>
+        </div>
+    </div>
+
+    <h2>Academic Calendar</h2>
+    <p>
+      For the complete academic calendar including term dates, holidays, and exam periods, download the Academic Calendar PDF.
+    </p>
+    <div class="calendar-link">
+      <a href="docs/academic_calendar.pdf" class="button">View Academic Calendar (PDF)</a>
+    </div>
+</div>
+
+<!-- Department Modal (hidden by default) -->
+<div id="deptModal" class="dept-modal" style="display:none;">
+  <div class="dept-modal-content">
+    <span id="deptModalClose" class="modal-close">&times;</span>
+    <h2 id="modalDeptTitle"></h2>
+    <h3>Vision &amp; Mission</h3>
+    <p id="modalDeptVision"></p>
+    <h3>Message from Dean</h3>
+    <p id="modalDeptDean"></p>
+    <h3>Activities</h3>
+    <ul id="modalDeptActivities"></ul>
+    <h3>Faculty Profile</h3>
+    <ul id="modalDeptFaculty"></ul>
+    <h3>About the Programme</h3>
+    <p id="modalDeptAbout"></p>
+    <h3>Downloads</h3>
+    <ul id="modalDeptDownloads"></ul>
+  </div>
+</div>
+
+
+  <footer>
+    &copy; 2025 Global University of Innovation. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

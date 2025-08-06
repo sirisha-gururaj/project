@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Global University of Innovation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Contact Us</h1>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="academics.html">Academics</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="campus-life.html">Campus Life</a>
+    <a href="contact.html" class="active">Contact</a>
+</nav>
+<div class="main">
+    <h2>Get in Touch</h2>
+    <p>
+        <strong>Address:</strong> 123 College Lane, Knowledge City, Innovation District, Tech Valley, Country - 567890<br>
+    <strong>Email:</strong> <a href="mailto:info@GUI.edu">admissions@GUI.edu</a> <br>
+    <strong>Phone:</strong> +91-1234-567890 &nbsp;|&nbsp; +91-9876-543210<br>
+    <strong>Office Hours:</strong> Monday to Friday, 9:00 AM – 6:00 PM<br>
+    </p>
+    <h2>Send a Message</h2>
+    <form id="contact-form">
+        <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+</div>
+<div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+</div>
+<div class="form-group">
+    <label for="msg">Message:</label>
+<textarea name="message" rows="4" required></textarea>
+</div>
+        
+        <input type="submit" value="Send">
+    </form>
+    <div id="contact-message"></div>
+</div>
+<footer>
+    &copy; 2025 Global University of Innovation. All rights reserved.
+</footer>
+<script src="script.js"></script>
+<script>
+const cForm = document.getElementById('contact-form');
+const cMsg = document.getElementById('contact-message');
+if (cForm) {
+    cForm.onsubmit = function(e) {
+        e.preventDefault();
+        cMsg.style.color = '#1976D2';
+        cMsg.innerHTML = "Thank you for reaching out! We'll get back to you soon.";
+        cForm.reset();
+    }
+}
+</script>
+</body>
+</html>
