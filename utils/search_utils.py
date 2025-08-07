@@ -1,12 +1,13 @@
 import os
 from langchain_community.tools.tavily_search import TavilySearchResults
 import sys
+import streamlit as st
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from config import config
 
 # Set the Tavily API key as an environment variable for the tool
-os.environ["TAVILY_API_KEY"] = config.TAVILY_API_KEY
+os.environ["TAVILY_API_KEY"] = st.secrets["TAVILY_API_KEY"]
 
 def perform_web_search(query: str):
     """
