@@ -1,10 +1,12 @@
 Get in Touch
 Address:
-123 College Lane, Knowledge City, Country
+123 College Lane, Knowledge City, Innovation District, Tech Valley, Country - 567890
 Email:
-info@abccollege.edu
+admissions@GUI.edu
 Phone:
-+91-1234-567890
++91-1234-567890  |  +91-9876-543210
+Office Hours:
+Monday to Friday, 9:00 AM – 6:00 PM
 Send a Message
 Name:
 Email:
